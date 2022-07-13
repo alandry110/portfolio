@@ -1,0 +1,88 @@
+/* colors scheme, margins and sizing for entire page */
+:root {
+    --navy: #023246;
+    --offwhite: #f6f6f6;
+    --cream: #d4d4ce;
+    --turquoise: #287094;
+}
+
+/* added top margin to fix content overlay from fixed position*/
+figure {
+    margin-top: 80px;
+    text-align: center;
+}
+
+/*styling about me section*/
+.about-me {
+    text-align: center;
+    /* look for better font */
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* size of logo*/
+nav img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 10px;
+    background-color: var(--offwhite); 
+}
+
+/* background color for nav bar */
+.navbar {
+    background-color: var(--navy);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* styled links inside nav bar */
+.navbar a {
+    float: right;
+    display: block;
+    color: var(--offwhite);
+    text-align: center;
+    padding: 22px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* color of links when hover */
+.navbar a:hover {
+    background-color: var(--offwhite);
+    color: var(--navy);
+}
+
+/* hide link that should open and close the nav bar on small screens */
+.navbar .icon {
+    display: none;
+}
+
+/* responsive screen.
+    When the screen is less than 600 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the navbar (.icon) */
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display:none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* responsive screen.
+    Added to navbar with JS when the use clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: right;
+        display: block;
+        text-align: left;
+    }
+}
+

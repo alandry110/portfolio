@@ -4,13 +4,103 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio</title>
-        <!-- create unique favicon -->
-        <link rel="icon" type="image/x-icon" href="./assets/images/heart.png">
+        <!-- personalized favicon. need to add a navy background -->
+        <link rel="icon" type="image/x-icon" href="./assets/images/acl-logo.png">
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/reset.css">
     </head>
 
     <body>
+         <header id="header">
+        <!-- this logo will display ontop of the color #023246 (use var() and ::root). 
+                need to resize -->
+
+        <!-- nav list will be centered and jump to the appropriate section onclick -->
+                
+            <nav class="navbar" id="myNavbar">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <img src="./assets/images/acl-logo.png" alt="logo of Ashlynn's initals"/><a href="#header" class="acitve"></a>
+                <a href="#aboutme">about me</a>
+                <a href="#mywork">my work</a>
+                <a href="#myresume">my resume</a>
+                <a href="#contactme">contact me</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+            </nav>
+
+            <!-- see if you can use pseudo elements/classes.
+                    need to resize -->
+            <figure>
+                <img src="./assets/images/ashlynn-signature.png" alt="Ashlynn's signature infront of text that reads 'Portfolio'">
+            </figure>
+
+            <!-- this will be a flex-box column -->
+            <main id="aboutme">
+                <!-- this will be the text color #023246 (use var() and ::root) -->
+                 <h2 class="about-me">about me</h2>
+                <!-- images needs to display on the left column. 
+                        need to resize -->
+                <section class="about-me">
+                    <img src="./assets/images/IMG_1850.jpg" alt="Photo of Ashlynn Landry" width="360" height="320">
+                    <p> <!-- need to write an about me --> </p>
+                </section>
+
+            <!-- google how to add a vertical line break in the page and add it here -->
+            </main>
+
+        <!-- This will be 4 boxes that will grow when you hover over them -->
+            <main id="mywork">
+            <!-- these need to be clickable links to deployed page from github (need to make a repository for each)-->
+                <div class="grow">
+                    <h2>my work</h2>
+                    <div>my favorite musician</div>
+                    <div>watch that box</div>
+                    <div>code refractor</div>
+                    <div>CSS snippet cheat sheet</div>
+                </div>
+
+            <!-- google how to add a vertical line break in the page and add it here -->
+            </main>
+
+        <!-- This will be 3 circles that... when you hover over them -->
+            <main id="myresume">
+            <!-- these need to be clickable links to deployed page from github (need to make a repository for each)-->
+                <div class="grow">
+                    <h2>my resume</h2>
+                    <div>education</div>
+                    <div>experience</div>
+                    <div>skills</div>
+                </div>
+
+            <!-- these needs to be a clickable link (on top of a flex box) to deployed page from github (need to make a repository for each) OR link to a google drive doc-->
+                <section>
+                    <a href="##">view pdf</a>
+                </section>
+
+            <!-- google how to add a vertical line break in the page and add it here -->
+            </main>
+
+            <main id="contactme">
+                <h2>contact me</h2>
+                <ul>
+                    <li>770.366.6797</li>
+                    <li><a href="mailto:ashclandry@gmail.com">ashclandry@gmail.com</a></li>
+                <!-- link github profile-->
+                    <li><a href="##">my GitHub</a></li>
+                </ul>
+
+            <!-- google how to add social media icon and link -->
+                <ul>
+                    <li>IG</li>
+                    <li>FB</li>
+                    <li>LI</li>
+                </ul>
+            </main>
+        </header>
+        
         <script src="./assets/css/script.js"></script>
     </body>
+
+    <footer>
+        <!-- look up best practices for footer information -->
+    </footer>
 </html>
