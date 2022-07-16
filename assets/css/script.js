@@ -1,9 +1,9 @@
-/* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the icon */
-function myFunction() {
-    var x = document.getElementById("myNavbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
-    }
-  }
+//NAVIGATION BAR: toggle menu button 
+const menuButton = document.getElementsByClassName('menu-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+menuButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+

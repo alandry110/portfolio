@@ -1,4 +1,8 @@
-/* colors scheme, margins and sizing for entire page */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
 :root {
     --navy: #023246;
     --offwhite: #f6f6f6;
@@ -6,83 +10,177 @@
     --turquoise: #287094;
 }
 
-/* added top margin to fix content overlay from fixed position*/
-figure {
-    margin-top: 80px;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* aligns all headings in the center */
+.center {
     text-align: center;
 }
 
-/*styling about me section*/
-.about-me {
-    text-align: center;
-    /* look for better font */
-    font-family:'Times New Roman', Times, serif;
-}
-
-/* size of logo*/
-nav img {
-    width: 50px;
-    height: 50px;
-    float: left;
-    margin: 10px;
-    background-color: var(--offwhite); 
-}
-
-/* background color for nav bar */
+/* NAVIGATION BAR */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--navy);
-    overflow: hidden;
+    color: var(--offwhite);
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-/* styled links inside nav bar */
-.navbar a {
-    float: right;
-    display: block;
-    color: var(--offwhite);
-    text-align: center;
-    padding: 22px;
-    text-decoration: none;
-    font-size: 17px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.logo {
+    height: 40px;
+    margin: .5rem;
+    background-color: var(--offwhite); 
+    border-radius: 50%;
 }
 
-/* color of links when hover */
-.navbar a:hover {
+.navbar-links menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: var(--offwhite);
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li a:hover {
     background-color: var(--offwhite);
     color: var(--navy);
 }
 
-/* hide link that should open and close the nav bar on small screens */
-.navbar .icon {
+.menu-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
 }
 
-/* responsive screen.
-    When the screen is less than 600 pixels wide, hide all links, except for the first one ("logo"). Show the link that contains should open and close the navbar (.icon) */
-@media screen and (max-width: 600px) {
-    .navbar a:not(:first-child) {display:none;}
-    .navbar a.icon {
-        float: right;
-        display: block;
+.menu-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--offwhite);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none; 
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
     }
 }
 
-/* responsive screen.
-    Added to navbar with JS when the use clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-    .navbar.responsive {position: relative;}
-    .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navbar.responsive a {
-        float: right;
-        display: block;
-        text-align: left;
+/* SIGNATURE PHOTO */
+.responsive-sig {
+    margin-top: 80px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* ABOUT ME */
+.columns {
+    float: left;
+    width: 50%;
+    padding: 12px;
+    min-height: 300px;
+}
+
+.rows::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media  screen and (max-width: 768px) {
+    .columns {
+        width: 100%;
     }
 }
+
+/* MY WORK */
+.mywork {
+    border-style: none;
+    text-align: center;
+    background-color: var(--cream);
+    border-width: 1px;
+    padding: 10px;
+    float: left;
+    width: 50%;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--navy);
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--navy);
+}
+
+a:hover {
+    color: var(--offwhite);
+}
+
+@media screen and (max-width: 768px) {
+    .mywork {
+      width: 100%;
+    }
+}
+
+/* CONTACT ME */
+
+
+
+
+
+
+
+
+
 
