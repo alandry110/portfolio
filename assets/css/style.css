@@ -1,21 +1,27 @@
+/* using universal selector to apply consistent attributes */
 * {
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
+/* using :root selector to declare global variables */
 :root {
     --navy: #023246;
     --offwhite: #f6f6f6;
     --cream: #d4d4ce;
-    --turquoise: #287094;
+    --space-around: 20px;
+}
+
+/* FOOTER: contact me section */
+footer {
+    background-color: var(--navy);
+    color: var(--offwhite);
+    margin-top: 30px; /* adds 30px all aroung 'contact me' */
 }
 
 /* aligns all headings in the center */
 .center {
     text-align: center;
-    padding: 20px
+    padding: var(--space-around);
 }
 
 /* NAVIGATION BAR */
@@ -24,20 +30,17 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--navy);
-    color: var(--offwhite);
-    
+    color: var(--offwhite);  
 }
 
 .logo {
-    height: 40px;
-    margin: .5rem;
+    height: 80px;
+    margin: 10px var(--space-around);
     background-color: var(--offwhite); 
     border-radius: 50%;
 }
 
 .navbar-links menu {
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -48,7 +51,7 @@
 .navbar-links li a {
     text-decoration: none;
     color: var(--offwhite);
-    padding: 1rem;
+    padding: 30px;
     display: block;
 }
 
@@ -59,13 +62,13 @@
 
 .menu-button {
     position: absolute;
-    top: .75rem;
-    right: 1rem;
+    top: 35px;
+    right: var(--space-around);
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 31px;
-    height: 21px;
+    width: 50px;
+    height: 30px;
 }
 
 .menu-button .bar {
@@ -100,7 +103,7 @@
     }
 
     .navbar-links li a {
-        padding: .5rem 1rem;
+        padding: var(--space-around);
     }
 
     .navbar-links.active {
@@ -110,11 +113,12 @@
 
 /* SIGNATURE PHOTO */
 .responsive-sig {
-    margin-top: 80px;
-    text-align: center;
-    display: block;
+    margin-top: var(--space-around);
+    margin-bottom: var(--space-around);
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    display: block;
     width: 50%;
 }
 
@@ -126,7 +130,7 @@
 #profile {
     width: 350px;
     border-radius: 100%;
-    margin-left: 80px; /* i want this to be centered on the page*/
+    margin-left: 20px; /* i want this to be centered on the page*/
     
 }
 .columns {
@@ -156,68 +160,58 @@
 
 /* MY WORK */
 .worksection {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* element is a block-level flex container */
+    flex-wrap: wrap; /* elements follow the block to the right if there is space */
     margin-top: 2%;
-  }
-  
-  .mywork {
+    text-align: center; 
+}
+
+.mywork {
     flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .mywork header {
-    padding: 20px;
-    background: var(--navy);
-    color: var(--offwhite);
-    border-radius: 30px 30px 0 0;
-  }
-  
-  .mywork img {
+    padding: var(--space-around);   
+}
+
+/* style of work headers */
+.mywork header {
+    padding: var(--space-around); /* 20px padding around all sides*/
+    background: var(--navy); /* color of background */
+    color: var(--offwhite); /* color of text */
+    border-radius: var(--space-around) var(--space-around) 0 0; /* borders rounded on bottom corners */
+}
+
+/* style of work images */
+.mywork img {
     width: 100%;
     min-width: 300px;
-    opacity: 0.5;
-    border-radius: 0 0 30px 30px;
+    opacity: 0.5; /* opacity displayed over image */
+    border-radius: 0 0 var(--space-around) var(--space-around); /* borders rounded on bottom corners */
     
-  }
-  .mywork img:hover {
-    opacity: 1.0;
-  }
+}
 
+/* style when img hovering */
+.mywork img:hover {
+    opacity: 1.0; /* opacity is cancelled out */
+}
 
 /* CONTACT ME */
-footer {
-    background-color: var(--navy);
-    color: var(--offwhite);
-    margin-top: 30px;  
-}
-
-.contactme {
-    margin: 0;
-    padding: 0;
-}
-
-.contactme menu li a {
-    color: var(--offwhite)
-}
-
 .contactme menu li {
-    list-style: none;
-    display: inline-block;
+    list-style: none; /* removing bullets from list */
+    display: inline-block; /* Displays an element as an inline-level block container */
 }
 
+/* styling anchors */
 .contactme menu li a {
-    text-decoration: none;
-    color: var(--offwhite);
-    padding: 1rem;
-    display: block;
-    
+    text-decoration: none; /* remove underlines */
+    color: var(--offwhite); /* change color of text */
+    padding: var(--space-around); /* 20px padding all around */
+    margin: var(--space-around); /* 20px margin all around */
+    display: block; /* block element starts on a new line, and takes up the whole width */
 }
 
+/* style changes when hover over anchors */
 .contactme menu li a:hover {
-    background-color: var(--offwhite);
-    color: var(--navy);
+    background-color: var(--offwhite); /* change color of background */
+    color: var(--navy); /* change color of text */
 }
 
 @media screen and (max-width: 768px) {
@@ -233,10 +227,6 @@ footer {
 
     .contactme li {
         text-align: center;
-    }
-
-    .contactme li a {
-        padding: .5px 1px;
     }
 
     .contactme.active {
