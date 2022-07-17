@@ -1,6 +1,8 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -10,14 +12,10 @@
     --turquoise: #287094;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 /* aligns all headings in the center */
 .center {
     text-align: center;
+    padding: 20px
 }
 
 /* NAVIGATION BAR */
@@ -123,11 +121,21 @@ body {
 }
 
 /* ABOUT ME */
+#aboutme {
+    margin: 50px;
+}
+
+#profile {
+    width: 350px;
+    border-radius: 100%;
+    margin-left: 80px; /* i want this to be centered on the page*/
+    
+}
 .columns {
     float: left;
+    text-align: center;
     width: 50%;
     padding: 12px;
-    min-height: 300px;
 }
 
 .rows::after {
@@ -140,40 +148,102 @@ body {
     .columns {
         width: 100%;
     }
-}
 
-/* MY WORK */
-.mywork {
-    border-style: none;
-    text-align: center;
-    background-color: var(--cream);
-    border-width: 1px;
-    padding: 10px;
-    float: left;
-    width: 50%;
-}
-
-a:link {
-    text-decoration: none;
-    color: var(--navy);
-}
-
-a:visited {
-    text-decoration: none;
-    color: var(--navy);
-}
-
-a:hover {
-    color: var(--offwhite);
-}
-
-@media screen and (max-width: 768px) {
-    .mywork {
-      width: 100%;
+    #profile {
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-bottom: 10px;
     }
 }
 
+/* MY WORK */
+.worksection {
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    margin-top: 2%;
+  }
+  
+  .mywork {
+    flex: 1 0 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .mywork header {
+    padding: 20px;
+    background: var(--cream);
+    color: var(--navy);
+  }
+  
+  .mywork img {
+    width: 100%;
+    min-width: 300px;
+    opacity: 0.5;
+    
+  }
+  .mywork img:hover {
+    opacity: 1.0;
+  }
+
 /* CONTACT ME */
+footer {
+    background-color: var(--navy);
+    color: var(--offwhite);
+    margin-top: 30px;  
+}
+
+.contactme {
+    margin: 0;
+    padding: 0;
+}
+
+.contactme menu li a {
+    color: var(--offwhite)
+}
+
+.contactme menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.contactme menu li a {
+    text-decoration: none;
+    color: var(--offwhite);
+    padding: 1rem;
+    display: block;
+}
+
+.contactme menu li a:hover {
+    background-color: var(--offwhite);
+    color: var(--navy);
+}
+
+@media screen and (max-width: 768px) {
+    .contactme {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contactme menu {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contactme li {
+        text-align: center;
+    }
+
+    .contactme li a {
+        padding: .5px 1px;
+    }
+
+    .contactme.active {
+        display: flex;
+    }
+}
+
+
 
 
 
