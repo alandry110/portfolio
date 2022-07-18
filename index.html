@@ -21,8 +21,11 @@
         <!-- responsive navigation bar -->
         <nav class="navbar">
             <section>
+                <!-- jumps to about section when you click on the logo -->
+                <a href="#about">
                 <!-- image of brand logo displayed on the left of nav bar -->
-                <img src="./assets/images/acl-logo.png" alt="logo" class="logo"/><a href="#about" class="acitve"></a></a>
+                <img class="logo" src="./assets/images/acl-logo.png" alt="Ashlynn's personalized logo">
+                </a>
             </section>
             
             <!-- hamburger menu displays at 768px -->
@@ -49,71 +52,77 @@
 
         <!-- header is displayed as a responsive image -->
         <header>
-            <img src="./assets/images/ashlynn-signature.png" alt="Ashlynn's signature infront of text that reads 'Portfolio'" class="responsive-sig"/>
+            <img class="responsive-sig" src="./assets/images/ashlynn-signature.png" alt="Ashlynn's signature infront of text that reads 'Portfolio'">
         </header>
         
         <main>
             <h1 id="about" class="center">About Me</h1>
-            <!-- About Me section displayed as a 2 columns in a table -->
-            <section class="rows">
-                <!-- image displayed on left side of column -->
-                <section>
-                    <img src="./assets/images/IMG_1850.jpg" alt="Photo of Ashlynn Landry" id="profile" class="columns"/>
+           <!-- article section aligns image and paragraph as 2 columns on 1 row -->
+            <article class="about-row">
+                <section class="column">
+                    <img src="./assets/images/IMG_1850.jpg" alt="Professional portrait of Ashlynn Landry"/>
                 </section>
-                <!-- about me section displayed on right side of column and will fall below the image at 768px -->
-                <section class="columns">
-                    <p id="aboutme" class="center">Hey ya'll! My name is Ashlynn. I was born in Baton Rouge but my family moved to Atlanta, GA when I was about 2 years old, so im a Georgia peach at heart.
+
+                <section class="column">
+                    <p>
+                        Hey ya'll! My name is Ashlynn. I was born in Baton Rouge but my family moved to Atlanta, GA when I was about 2 years old, so im a Georgia peach at heart.
                         I graduated from Ole Miss in 2020 and am currently a Marketing and Communications Coordinator at Good Samaritan Health Center on the Westside of ATL.
-                        Shoutout to the Rebs for winning the National Championship...Hotty Toddy!</p>
+                        Shoutout to the Rebs for winning the National Championship...Hotty Toddy!
+                    </p>
                 </section>
-            </section>
+            </article>
+        </main>
 
-            <h1 id="work" class="center">My Work</h1>
+        <h1 id="work" class="center">My Work</h1>
 
-            <section class="worksection">
-                <!-- My Work section displayed as a flex box with links to the deployed application when you click on the image -->
+        <section class="work-container">
+            <!-- created seperate section with seperate class to make this job larger to showcase it as my most recent job. -->
+            <section class="most-recent">
                 <section class="mywork">
                     <!-- header of job 1 -->
                     <header>My Favorite Musician: HTML & CSS</header>
                     <!-- deployed application will display in separate tab because of 'target' attribute -->
                     <a href="" target="_blank">
-                    <img src="./assets/images/gettyimages-1746496-e250770b-3cd0-4d9d-ad98-b4254549b165.jpg" alt="Shania Twain performing" id="job1">
+                    <img src="./assets/images/gettyimages-1746496-e250770b-3cd0-4d9d-ad98-b4254549b165.jpg" alt="Shania Twain performing">
                     </a>
-                  </section>
-
-                  <section class="mywork">
+                </section>
+            </section>
+            
+            <section class="other-work">
+                <section class="mywork">
                     <!-- header of job 2 -->
                     <header>Spot The Difference: HTML, CSS & JavaScript</header>
                     <!-- deployed application will display in separate tab because of 'target' attribute -->
                     <a href="https://alandry110.github.io/My-Favorite-Musician-/" target="_blank">
-                    <img src="./assets/images/enhanced-31550-1429646952-7.jpg" alt="Portrait of 'Boo' the dog" id="job2">
+                    <img src="./assets/images/enhanced-31550-1429646952-7.jpg" alt="Portrait of 'Boo' the dog">
                     </a>
                   </section>
-
+            
                   <section class="mywork">
                     <!-- header of job 3-->
                     <header>Horiseon: Code Refractor</header>
                     <!-- deployed application will display in separate tab because of 'target' attribute -->
                     <a href="https://alandry110.github.io/coderefactor/Develop/" target="_blank">
-                    <img src="./assets/images/digital-marketing-meeting.jpg" alt="Coworkers having a meeting at a desk" id="job3">
+                    <img src="./assets/images/digital-marketing-meeting.jpg" alt="Coworkers having a meeting at a desk">
                     </a>
                   </section>
             </section>
-        </main>
+        </section>
     </body>
 
     <!-- Contact Me section -->
-    <footer>
-        <h2 id="contact" class="center">Contact Me</h2>
-            
+    
+
+    <footer class="center">  
         <section class="contactme">
+            <h1 id="contact">Contact Me</h1> 
             <!-- the semantic element menu and used to create an unorganized list -->
-            <menu class="center" class="contactme">
+            <menu>
                 <!-- each item in list is styled in css and entire list displays on the footer of the page -->
                 <!-- link to linkedin will deploy on separate tab  because of 'target' attribute -->
                 <li><a href="https://www.linkedin.com/in/ashlynnlandry/" target="_blank">Follow Me</a></li>
                 <!-- when clicked viewer will be take to a separate window with viewers preferred email browser to send Ashlynn an email -->
-                <li><a href="mailto:ashclandry@gmail.com">Email Me</a></li>
+                <li><a href="mailto:ashclandry@gmail.com" target="_blank">Email Me</a></li>
                 <!-- link to gitHub will deploy on separate tab  because of 'target' attribute -->
                 <li><a href="https://github.com/alandry110" target="_blank">My GitHub</a></li>
             </menu>
