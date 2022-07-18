@@ -5,17 +5,17 @@
 
 /* using :root selector to declare global variables */
 :root {
-    --navy: #023246;
+    --greenish: #607070;
     --offwhite: #f6f6f6;
-    --cream: #d4d4ce;
+    --mauve: #7d6e6f;
     --space-around: 20px;
 }
 
 /* FOOTER: contact me section */
 footer {
-    background-color: var(--navy);
+    background-color: var(--greenish);
     color: var(--offwhite);
-    margin-top: 30px; /* adds 30px all aroung 'contact me' */
+    margin-top: 30px; /* adds 30px all around 'contact me' */
 }
 
 /* aligns all headings in the center */
@@ -29,7 +29,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--navy);
+    background-color: var(--greenish);
     color: var(--offwhite);  
 }
 
@@ -40,27 +40,27 @@ footer {
     border-radius: 50%;
 }
 
-.navbar-links menu {
+.links menu {
     display: flex;
 }
 
-.navbar-links li {
+.links li {
     list-style: none;
 }
 
-.navbar-links li a {
+.links li a {
     text-decoration: none;
     color: var(--offwhite);
     padding: 30px;
     display: block;
 }
 
-.navbar-links li a:hover {
+.links li a:hover {
     background-color: var(--offwhite);
-    color: var(--navy);
+    color: var(--greenish);
 }
 
-.menu-button {
+.hamburger-menu {
     position: absolute;
     top: 35px;
     right: var(--space-around);
@@ -71,7 +71,7 @@ footer {
     height: 30px;
 }
 
-.menu-button .bar {
+.hamburger-menu .bar {
     height: 3px;
     width: 100%;
     background-color: var(--offwhite);
@@ -79,11 +79,11 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .menu-button {
+    .hamburger-menu {
         display: flex;
     }
 
-    .navbar-links {
+    .links {
         display: none; 
         width: 100%;
     }
@@ -93,20 +93,20 @@ footer {
         align-items: flex-start;
     }
 
-    .navbar-links menu {
+    .links menu {
         width: 100%;
         flex-direction: column;
     }
 
-    .navbar-links li {
+    .links li {
         text-align: center;
     }
 
-    .navbar-links li a {
+    .links li a {
         padding: var(--space-around);
     }
 
-    .navbar-links.active {
+    .links.active {
         display: flex;
     }
 }
@@ -174,7 +174,7 @@ footer {
 /* style of work headers */
 .mywork header {
     padding: var(--space-around); /* 20px padding around all sides*/
-    background: var(--navy); /* color of background */
+    background: var(--mauve); /* color of background */
     color: var(--offwhite); /* color of text */
     border-radius: var(--space-around) var(--space-around) 0 0; /* borders rounded on bottom corners */
 }
@@ -211,30 +211,8 @@ footer {
 /* style changes when hover over anchors */
 .contactme menu li a:hover {
     background-color: var(--offwhite); /* change color of background */
-    color: var(--navy); /* change color of text */
+    color: var(--greenish); /* change color of text */
 }
-
-@media screen and (max-width: 768px) {
-    .contactme {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .contactme menu {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .contactme li {
-        text-align: center;
-    }
-
-    .contactme.active {
-        display: flex;
-    }
-}
-
-
 
 
 
