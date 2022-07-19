@@ -59,5 +59,5 @@ https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
 ## This is what my final portfolio looks like:
 
-![Full page screenshot of deployed portfolio](./Develop/assets/images/final-horiseon-home-page%20.png)
+![Full page screenshot of deployed portfolio](./assets/images/webcapture.png)
 
