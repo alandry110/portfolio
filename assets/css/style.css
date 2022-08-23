@@ -18,7 +18,7 @@ footer {
     margin-top: 30px; /* adds 30px all around 'contact me' */
 }
 
-section header a {
+#headerLink {
     text-decoration: none;
     color: var(--offwhite);
 }
