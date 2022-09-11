@@ -18,7 +18,7 @@ footer {
     margin-top: 30px; /* adds 30px all around 'contact me' */
 }
 
-#headerLink {
+.headerLink {
     text-decoration: none;
     color: var(--offwhite);
 }
@@ -35,7 +35,15 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: var(--greenish);
-    color: var(--offwhite);  
+    color: var(--offwhite);
+    overflow: hidden;
+    top: 0;  
+    position: fixed;
+    width: 100%;
+}
+
+main header {
+    margin-top: 8rem;
 }
 
 /* position and style of logo */
@@ -192,12 +200,11 @@ footer {
     }
 }
 
-
 /* MY WORK */
 /* this selector controls only the flex for "my favorite musician" section */
 .work-container {
-display: block;
-width: 100%;
+    display: block;
+    width: 100%;
 }
 
 .most-recent {
@@ -229,13 +236,7 @@ width: 100%;
 .mywork img {
     width: 100%;
     min-width: 300px;
-    opacity: 0.5; /* opacity displayed over image */
     border-radius: 0 0 var(--space-around) var(--space-around); /* borders rounded on bottom corners */
-}
-
-/* style when img hovering */
-.mywork img:hover {
-    opacity: 1.0; /* opacity is cancelled out */
 }
 
 /* CONTACT ME */
@@ -258,8 +259,6 @@ width: 100%;
     background-color: var(--offwhite); /* change color of background */
     color: var(--greenish); /* change color of text */
 }
-
-
 
 /* When the width is between 1801px and 1920px - change padding of .about-row */
 @media screen and (max-width: 1920px) and (min-width: 1801px) {
