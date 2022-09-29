@@ -11,13 +11,15 @@
         <link rel="icon" type="image/x-icon" href="./assets/images/acl-logo.png">
         <!-- link to reset stylesheet ALWAY ABOVE CSS STYLESHEET -->
         <link rel="stylesheet" href="./assets/css/reset.css">
+        <!-- link to Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <!-- link to css stylesheet -->
         <link rel="stylesheet" href="./assets/css/style.css">
         <!-- link to javascript file -->
-        <script src="./assets/css/script.js" defer></script>
+        <script src="./assets/js/script.js" defer></script>
     </head>
 
-    <body>
+    <body class="h-100 d-inline-block">
         <!-- responsive navigation bar -->
         <nav class="navbar">
             <section>
@@ -42,103 +44,50 @@
                 <menu>
                     <!-- each item in list is styled in css and entire list displays on the right of the nav bar -->
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="#work">My Work</a></li>
+                    <li><a href="./mywork.html">My Work</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                     <!-- using 'target="_blank"' to deploy the pdf of my resume to show in a separate tab -->
-                    <li><a href="https://drive.google.com/file/d/1wKtH_vUUwzCIhclQmj0e-MriQ-gxPaq8/view?usp=sharing" target="_blank">My Resume</a></li>
+                    <li><a href="https://drive.google.com/file/d/1r_zI80pa3rwnoVNYlsg0AxrL6XTU4k4a/view?usp=sharing" target="_blank">My Resume</a></li>
                 </menu>
             </section>
         </nav>
 
        
-        <main>
-             <!-- header is displayed as a responsive image -->
-            <header>
-                <img class="responsive-sig" src="./assets/images/ashlynn-signature.png" alt="Ashlynn's signature infront of text that reads 'Portfolio'">
-            </header>
-        
-            <h1 id="about" class="center">About Me</h1>
+        <main>        
+            <h1 class="center topMargin">About Me</h1>
            <!-- article section aligns image and paragraph as 2 columns on 1 row -->
             <article class="about-row">
                 <section class="column">
-                    <img src="./assets/images/IMG_1850.jpg" alt="Professional portrait of Ashlynn Landry"/>
+                    <img src="./assets/images/portrait.jpg" alt="Professional portrait of Ashlynn Landry"/>
                 </section>
 
                 <section class="column">
                     <p>
-                        I'm Ashlynn Landry, a 20-something-year-old building a career for myself in Front End Web Development. 
+                        I'm Ashlynn Landry, a 20-something-year-old building a career for myself in Web Development. 
                         Born in Baton Rouge, raised as a Georgia peach, and graduated with a BBA from Ole Miss, my heart lies in many places, 
                         primarily with my dog Jamie, pottery, and design. 
                         <br>
                         <br>
-                        Currently working as a Marketing and Communications Coordinator at Good Samaritan Health Center in Atlanta, 
-                        creating branded graphics, materials and working closely with their website. 
-                        There, I grew a liking for web design and development, which is what brings you and me here today!
+                        In my previous role as Marketing and Communications Coordinator at Good Samaritan Health Center, I grew a liking for web design and development,
+                        which led me to the Georgia Institute of Technology's coding Bootcamp. I am working towards a certificate in Full Stack Flex Web Development and will graduate in December, 2022. 
                         <br>
                         <br>
                         With my background in marketing and a love for graphic design, this portfolio showcases the skills I have learned thus far, 
-                        and I hope that it will enable me to find a job to utilize my strengths and grow in the world of web development.   
-                        <br>
-                        <br>
-                        Jump to the bottom of this page to contact me! 
-                    </p>
+                        and I hope that it will enable me to find a job that will allow me to utilize my skillset to create visually beautiful, and 
+                        accessible, websites and applications.
                 </section>
-            </article>
+            </article> 
         </main>
 
-        <h1 id="work" class="center">My Work</h1>
-
-        <section class="work-container">
-            <!-- created separate section with separate class to make this job larger to showcase it as my most recent job. -->
-            <section class="most-recent">
-                <section class="mywork">
-                    <!-- header of job 1 -->
-                    <header class="headerLink"><a href="https://github.com/isayani/cocktail-music-generator" target="_blank" class="headerLink" title="Click here to view the GitHub repository">Mix & Match: Cocktail and Music Generator</header>
-                    <!-- deployed application will display in separate tab because of 'target' attribute -->
-                    <a href="https://isayani.github.io/cocktail-music-generator/" target="_blank">
-                    <img src="./assets/images/Mix & Math Screenshot.png" alt="Landing Page of Mix & Match: Cocktail and Music Generator">
-                    </a>  
-                </section>
-            </section>
-            
-            <section class="other-work">
-
-                <section class="mywork">
-                    <!-- header of job 2-->
-                    <header><a href="https://github.com/alandry110/coderefactor" target="_blank" class="headerLink" title="Click here to view the GitHub repository">Horiseon: Code Refractor</header>
-                    <!-- deployed application will display in separate tab because of 'target' attribute -->
-                    <a href="https://alandry110.github.io/coderefactor/Develop/" target="_blank">
-                    <img src="./assets/images/digital-marketing-meeting.jpg" alt="Coworkers having a meeting at a desk">
-                    </a>
-                  </section>
-
-                <section class="mywork">
-                    <!-- header of job 3 -->
-                    <header><a href="https://github.com/alandry110/GSHC-Portfolio" target="_blank" class="headerLink" title="Click here to view the GitHub repository">Good Samaritan Health Center: Q1 Update 2022</header>
-                    <!-- deployed application will display in separate tab because of 'target' attribute -->
-                    <a href="https://indd.adobe.com/view/81b9696a-2a5f-441a-b811-522be996a221" target="_blank">
-                    <img src="./assets/images/Screen Shot 2022-07-18 at 9.03.54 PM.png" alt="Good Samaritan Health Center Quarterly Two Update 2022 Cover">
-                    </a>
-                  </section>
-            
-                  <section class="mywork">
-                    <!-- header of job 4-->
-                    <header><a href="https://github.com/alandry110/GSHC-Portfolio" target="_blank" class="headerLink" title="Click here to view the GitHub repository">Good Samaritan Health Center: Annual Report</header>
-                    <!-- deployed application will display in separate tab because of 'target' attribute -->
-                    <a href="https://adobeindd.com/view/publications/7e0ccb91-af5c-4043-92cd-00ce606e2d3c/1/publication-web-resources/pdf/Annual_Impact_Report_2021_(4).pdf" target="_blank">
-                    <img src="./assets/images/GSHC AIM.png" alt="Good Samaritan Health Center Annual Impact Report 2021 Cover">
-                    </a>
-                  </section>
-            </section>
+        <section class="center">
+            <a href="./mywork.html" id="myWork">View My Work</a>
         </section>
     </body>
 
     <!-- Contact Me section -->
-    
-
     <footer class="center">  
         <section class="contactme">
-            <h1 id="contact">Contact Me</h1> 
+            <h3 id="contact">Contact Me</h3> 
             <!-- the semantic element menu and used to create an unorganized list -->
             <menu>
                 <!-- each item in list is styled in css and entire list displays on the footer of the page -->
@@ -147,7 +96,7 @@
                 <!-- when clicked viewer will be take to a separate window with viewers preferred email browser to send Ashlynn an email -->
                 <li><a href="mailto:ashclandry@gmail.com" target="_blank">Email Me</a></li>
                 <!-- link to gitHub will deploy on separate tab  because of 'target' attribute -->
-                <li><a href="https://github.com/alandry110" target="_blank">My GitHub</a></li>
+                <li><a href="https://github.com/ashclandry" target="_blank">My GitHub</a></li>
             </menu>
         </section>       
     </footer> 

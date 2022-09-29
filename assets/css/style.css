@@ -16,11 +16,7 @@ footer {
     background-color: var(--greenish);
     color: var(--offwhite);
     margin-top: 30px; /* adds 30px all around 'contact me' */
-}
 
-.headerLink {
-    text-decoration: none;
-    color: var(--offwhite);
 }
 
 /* aligns all headings in the center */
@@ -39,11 +35,8 @@ footer {
     overflow: hidden;
     top: 0;  
     position: fixed;
+    z-index: 1; ;
     width: 100%;
-}
-
-main header {
-    margin-top: 8rem;
 }
 
 /* position and style of logo */
@@ -131,15 +124,23 @@ main header {
     }
 }
 
-/* SIGNATURE PHOTO */
-.responsive-sig {
-    margin: var(--space-around) auto;
-    text-align: center;
-    display: block;
-    width: 50%;
+/* ABOUT ME */
+.topMargin {
+    margin-top: 8rem;
 }
 
-/* ABOUT ME */
+#myWork {
+    background-color: var(--mauve);
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--offwhite);
+    border-radius: 2rem;
+}
+
+#myWork:hover {
+    background-color: var(--greenish);
+}
+
 .about-row {
     display: flex;
     justify-content: center;
@@ -150,9 +151,6 @@ main header {
 
 .column img {
     margin-right: var(--space-around);
-}
-
-.column img {
     width: 300px;
 }
 
@@ -260,41 +258,15 @@ main header {
     color: var(--greenish); /* change color of text */
 }
 
-/* When the width is between 1801px and 1920px - change padding of .about-row */
-@media screen and (max-width: 1920px) and (min-width: 1801px) {
-    .work-container {
-        padding-left: 300px;
-        padding-right: 300px;
-    }
+.card-link {
+    color: black;
+    font-size: 18px;
 }
 
-/* When the width is between 1701px and 1800px - change padding of .about-row */
-@media screen and (max-width: 1800px) and (min-width: 1701px) {
-    .work-container{
-        padding-left: 150px;
-        padding-right: 150px;
-    }
+.card-link:hover {
+    color: var(--greenish)
 }
 
-/* When the width is between 966px and 1700px - change padding of .about-row */
-@media screen and (max-width: 1700px) and (min-width: 966px) {
-    .work-container {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
+.card-img-top {
+    object-fit: fill;
 }
-
-/* When the max width is 965px - change change padding of .about-row */
-@media screen and (max-width: 965px) {
-    .work-container {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
-
-
-
-
-
-
-
