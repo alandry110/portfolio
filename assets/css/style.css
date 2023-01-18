@@ -131,19 +131,12 @@ footer {
 
 .overlay {
     position: absolute;
-    opacity: 0;
-    transition: .5s ease;
     background-color: var(--greenish);
     width: 100%;
     padding: 20px 0px 20px 0px;
     text-align: center;
     border-radius: 5px 5px 0px 0px;
 
-}
-
-.card:hover .overlay {
-    opacity: 1;
-    
 }
 
 .text {
