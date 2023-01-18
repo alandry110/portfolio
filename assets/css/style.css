@@ -129,6 +129,28 @@ footer {
     margin-top: 8rem;
 }
 
+.overlay {
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--greenish);
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+}
+
 #myWork {
     background-color: var(--mauve);
     padding: 1rem;
